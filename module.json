@@ -1,0 +1,16 @@
+{
+    "name": "DisposableRanks",
+    "alias": "disposableranks",
+    "description": "Disposable Ranks And Awards Module",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\DisposableRanks\\Providers\\DisposableRanksServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+      "helpers.php"
+    ],
+    "requires": []
+}

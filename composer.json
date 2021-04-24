@@ -1,0 +1,20 @@
+{
+    "name": "DisposableRanks",
+    "type": "phpvms-module",
+    "description": "Disposable Ranks And Awards Module",
+    "require": {
+        "composer/installers": "~1.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\DisposableRanks\\Providers\\DisposableRanksServiceProvider"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\DisposableRanks\\": "."
+        }
+    }
+}
