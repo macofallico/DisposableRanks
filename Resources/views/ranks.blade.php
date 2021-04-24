@@ -7,7 +7,7 @@
     {{-- <h3 class="card-title">@lang('DisposableRanks::common.ranks')</h3> --}}
     </div>
   </div>
-
+  {{-- Ranks Table --}}
   <div class="card mb-2">
     <div class="card-header p-1">
       <h5 class="m-1 p-0">
@@ -25,6 +25,7 @@
           <th>@lang('DisposableRanks::common.paymanual')</th>
           <th>@lang('DisposableRanks::common.image')</th>
           <th>@lang('DisposableRanks::common.restrict')</th>
+          <th>&nbsp;</th>
         </tr>
         @foreach($ranks as $rank)
           <tr>
@@ -45,9 +46,51 @@
                 @lang('DisposableRanks::common.allowedno')
               @endif
             </td>
+            <td>
+              @if($rank->subfleets->count() > 0)
+                <i class="fas fa-angle-double-down ml-1 mr-2" type="button" data-toggle="collapse" aria-expanded="false"
+                    data-target="#subfleets-{{ $rank->id }}" aria-controls="subfleets-{{ $rank->id }}"
+                    title="@lang('DisposableRanks::common.showhide')">
+                </i>
+              @endif
+            </td>
           </tr>
-        @endforeach			
+        @endforeach
       </table>
     </div>
+  </div>
+  {{-- Rank Boxes --}}
+  <div class="row row-cols-3">
+    @foreach($ranks as $rank)
+    <div id="subfleets-{{ $rank->id }}" class="collapse">
+      @if($rank->subfleets->count() > 0)
+        <div class="col">
+          <div class="card mb-2">
+            <div class="card-header p-1">
+              <h5 class="m-1 p-0">
+                {{ $rank->name }}
+                <i class="fas fa-tag float-right"></i>
+              </h5>
+            </div>
+            <div class="card-body p-1">
+              @foreach($rank->subfleets as $subfleet)
+                @if($dispal)
+                  <a href="{{ route('DisposableAirlines.dsubfleet', [$subfleet->type]) }}">
+                @endif
+                  <b>&bull; {{ $subfleet->name }} | {{ $subfleet->airline->name }} [@lang('common.aircraft'): {{ $subfleet->aircraft->count() }}]</b>
+                @if($dispal)
+                  </a>
+                @endif
+                <br>
+              @endforeach
+            </div>
+            <div class="card-footer text-right p-1">
+              @lang('DisposableRanks::common.minhour'): {{ $rank->hours }}
+            </div>
+          </div>
+        </div>
+      @endif
+    </div>
+    @endforeach
   </div>
 @endsection

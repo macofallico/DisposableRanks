@@ -9,8 +9,6 @@
         "Modules\\DisposableRanks\\Providers\\DisposableRanksServiceProvider"
     ],
     "aliases": {},
-    "files": [
-      "helpers.php"
-    ],
+    "files": [],
     "requires": []
 }
