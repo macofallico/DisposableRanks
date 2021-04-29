@@ -13,15 +13,15 @@ After enabling/disabling modules an app cache cleaning process IS necessary (che
 
 ***** Usage
 
-If you want to disable module auto links and add your own according to your template, then dashout 2 frontend link registration commands in the Providers\DisposableRanksServiceProvider.php file as shown below;\
-(Two forward slashes will make them disabled.)
+If you want to enable module auto links, then enable frontend link registration commands in ModuleFolder\Providers\....ServiceProvider.php file as shown below;
+(Two forward slashes (//) = Disabled, No forward slashes = Enabled )
 
 ```
-  // $this->moduleSvc->addFrontendLink('Ranks', '/dranks', 'fas fa-tags', $logged_in=true);
+  $this->moduleSvc->addFrontendLink('Ranks', '/dranks', 'fas fa-tags', $logged_in=true);
   // $this->moduleSvc->addFrontendLink('Awards', '/dawards', 'fas fa-trophy', $logged_in=true);
 ```
     
-Then you can add links to your navbar/sidebar with below examples;
+DisposableTheme IS capable of recognizing and showing proper links for Disposable Modules but if you need some more control, then you can add links to your navbar (or any other place) with below examples;
 
 ```
 <li>

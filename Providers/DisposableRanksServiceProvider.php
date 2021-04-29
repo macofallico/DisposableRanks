@@ -31,8 +31,10 @@ class DisposableRanksServiceProvider extends ServiceProvider
   public function registerLinks()
   {
     // Below two lines control the auto links in your navbar.
-    $this->moduleSvc->addFrontendLink('Ranks', '/dranks', 'fas fa-tags', $logged_in=true);
-    $this->moduleSvc->addFrontendLink('Awards', '/dawards', 'fas fa-trophy', $logged_in=true);
+
+    // $this->moduleSvc->addFrontendLink('Ranks', '/dranks', 'fas fa-tags', $logged_in=true);
+    // $this->moduleSvc->addFrontendLink('Awards', '/dawards', 'fas fa-trophy', $logged_in=true);
+
     // Do NOT disable admin link, it may cause errors in main admin panel
     $this->moduleSvc->addAdminLink('Disposable Ranks', '/admin/disposableranks');
   }
