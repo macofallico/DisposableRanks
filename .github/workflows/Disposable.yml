@@ -1,4 +1,4 @@
-name: Disposable
+name: 'Create Zip File'
 on:
   release:
     branches:
