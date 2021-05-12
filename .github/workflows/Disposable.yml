@@ -1,6 +1,6 @@
 name: 'Create Zip Archive'
 on:
-  push:
+  release:
     branches:
       - main
 jobs:
