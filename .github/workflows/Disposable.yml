@@ -1,4 +1,4 @@
-name: 'Create Zip File'
+name: 'Create Zip Archive'
 on:
   push:
     branches:
@@ -8,7 +8,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Create Zip File
-      run: zip -r DisposableRanks.zip . -x ".git/*" ".github/*"
-    - name: Release to Github
-      run: echo "Release"
+    - name: Archive Contents
+      uses: thedoctor0/zip-release@master
+      with:
+        filename: 'DisposableRanks.zip'
+        exclusions: '*.git* /*node_modules/* .editorconfig'
+    - name: Upload Release
+      uses: ncipollo/release-action@v1
+      with:
+        artifacts: "DisposableRanks.zip"
+        token: ${{ secrets.GITHUB_TOKEN }}
