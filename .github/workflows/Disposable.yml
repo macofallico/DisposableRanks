@@ -11,11 +11,13 @@ jobs:
     - name: Archive Contents
       uses: thedoctor0/zip-release@master
       with:
+        directory: '..'
+        path: 'DisposableRanks'
         filename: 'DisposableRanks.zip'
         exclusions: '*.git* /*node_modules/* .editorconfig'
     - name: Upload Release
       uses: ncipollo/release-action@v1
       with:
         name: 'Disposable Ranks Module'
-        artifacts: "DisposableRanks.zip"
+        artifacts: "../DisposableRanks.zip"
         token: ${{ secrets.GITHUB_TOKEN }}

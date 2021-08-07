@@ -5,10 +5,13 @@ Technically all blade files (views/pages or whatever you call them) should work 
 
 So if something looks weird in your template then you need to edit them.
 
-**Manual Installation Steps**
+**Installation Steps**
 
-Upload contents of the package (or pull/clone from GitHub) to your root/modules/DisposableRanks folder  
-Go to admin section and enable the module, that's all  
+* Manual Install : Upload contents of the package to your root/modules folder via ftp or your control panel's file manager 
+* GitHub Clone : Clone/pull repository to your root/modules/DisposableRanks folder
+* PhpVms Module Installer : Go to `admin -> addons/modules` , click `Add New` , select downloaded file and click `Add Module`
+
+Go to admin section and enable the module, that's all (only needed for Manual Install and Github Clone)
 After enabling/disabling modules an app cache cleaning process IS necessary (check admin/maintenance)
 
 **Usage**
