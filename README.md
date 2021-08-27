@@ -1,6 +1,6 @@
 # Disposable Ranks and Awards Module
 
-Module is compatible with any the latest development build of phpVMS v7 released after **23.APR.2021**. Provides;
+Module is compatible with any latest development build of phpVMS v7 released after **23.APR.2021**. Provides;
 
 * Ranks Page (with allowed Subfleets if there are any)
 * Awards Page
