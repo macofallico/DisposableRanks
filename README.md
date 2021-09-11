@@ -55,4 +55,5 @@ All Disposable Modules are capable of displaying customized files located under 
 
 ## Update Notes
 
-Nothing updated so far.
+11.SEP.21
+* PT-BR Translation (Thanks to Edson Felix)
