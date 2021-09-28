@@ -2,7 +2,7 @@
 
 Module is compatible with any latest development build of phpVMS v7 released after **23.APR.2021**. Provides;
 
-* Ranks Page (with allowed Subfleets if there are any)
+* Ranks Page (with allowed Subfleets display if there are any)
 * Awards Page
 
 ## Installation Steps
@@ -54,6 +54,9 @@ All Disposable Modules are capable of displaying customized files located under 
 * Target Location   : `root/resources/views/layouts/YourTheme/modules/DisposableModule/somefile.blade.php`
 
 ## Update Notes
+
+28.SEP.21
+* Fixed the order of displayed Awards (they will be natural sorted by their names)
 
 11.SEP.21
 * PT-BR Translation (Thanks to Edson Felix)

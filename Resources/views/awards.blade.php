@@ -9,7 +9,7 @@
   </div>
 
   <div class="row row-cols-4">
-    @foreach($awards as $award)
+    @foreach($awards->sortby('name', SORT_NATURAL) as $award)
       <div class="col">
         <div class="card mb-2">
           <div class="card-header p-1">
